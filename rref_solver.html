@@ -49,7 +49,7 @@
             <p class="inlineText">Rows:</p>
             <input name = "rows" id = "rows" type="text" value="1"></input>
 
-            <button name = 'createTableButton' id = "createTableButton" onclick="createTable(eval(document.getElementById('rows').value)||1,eval(document.getElementById('columns').value)||1)">Create Matrix</button>
+            <button name = 'createTableButton' id = "createTableButton" onclick="createTable(parseInt(document.getElementById('rows').value)||1,parseInt(document.getElementById('columns').value)||1)">Create Matrix</button>
             <button name = 'solve' id = 'solve' onclick ="solve()">Solve Matrix</button>
         </div>
         <table id ="matrix">
@@ -220,7 +220,7 @@
             for(var i=0;i<tbl.rows.length;i++){
                 var rowData =[];
                 for(var j=0;j<tbl.rows[i].cells.length;j++){
-                    rowData.push(new fraction(parseInt(tbl.rows[i].cells[j].children[0].value)||0,1));
+                    rowData.push(new fraction(eval(tbl.rows[i].cells[j].children[0].value)||0,1));
                 }
                 data.push(rowData);
             }
