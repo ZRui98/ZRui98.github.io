@@ -220,6 +220,7 @@
             for(var i=0;i<tbl.rows.length;i++){
                 var rowData =[];
                 for(var j=0;j<tbl.rows[i].cells.length;j++){
+                    console.log(tbl.rows[i].cells[j].children[0].value));
                     rowData.push(new fraction(eval(tbl.rows[i].cells[j].children[0].value)||0,1));
                 }
                 data.push(rowData);
