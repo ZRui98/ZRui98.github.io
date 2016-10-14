@@ -49,7 +49,7 @@
             <p class="inlineText">Rows:</p>
             <input name = "rows" id = "rows" type="text" value="1"></input>
 
-            <button name = 'createTableButton' id = "createTableButton" onclick="createTable(parseInt(document.getElementById('rows').value)||1,parseInt(document.getElementById('columns').value)||1)">Create Matrix</button>
+            <button name = 'createTableButton' id = "createTableButton" onclick="createTable(eval(document.getElementById('rows').value)||1,eval(document.getElementById('columns').value)||1)">Create Matrix</button>
             <button name = 'solve' id = 'solve' onclick ="solve()">Solve Matrix</button>
         </div>
         <table id ="matrix">
