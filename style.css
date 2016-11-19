@@ -1,0 +1,70 @@
+a{
+    color:black;
+    display: block;
+}
+
+#main {
+    position: absolute;
+    width: 100%;
+    height:80%;
+    display: block;
+    margin: auto;
+    right:1%;
+}
+
+.triangle-container{
+    height:100%;
+    width:100%;
+    position: relative;
+    overflow: hidden;
+}
+
+p{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size:48px;
+    letter-spacing: 3px;
+    position:relative;
+    text-align:center;
+    top:30%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+svg{
+    width:100%;
+    height:100%;
+}
+
+text{
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.triangle{
+    fill: #17b0e8;
+    cursor: pointer;
+}
+
+.triangle:hover {
+    fill:#67cbf0;
+}
+
+.project-triangle{
+    fill: #ff9933;
+    cursor: pointer;
+}
+
+.project-triangle:hover {
+    fill:#ffa64d;
+}
+
+#projects{
+    visibility:hidden;
+}
