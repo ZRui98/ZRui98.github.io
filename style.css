@@ -47,9 +47,13 @@ text{
             user-select: none;
 }
 
+.triangle, .project-triangle{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
 .triangle{
     fill: #17b0e8;
-    cursor: pointer;
 }
 
 .triangle:hover {
