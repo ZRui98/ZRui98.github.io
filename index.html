@@ -16,7 +16,7 @@
             <polygon class="triangle" points ="31 43 81 43 56 0"/>
             <polygon class="triangle" points ="118 91 93 48 143 48"/>
             <polygon class="triangle" points ="56 91 31 48 81 48"/>
-            <g class = "triangle" onclick ="toggle_visibility('projects');">
+            <g class = "triangle" onclick ="toggle_fade('projects');">
               <polygon points ="62 91 112 91 87 48"/>
               <text x="72" y="85" fill="white" font-size="7px">PROJECTS</text>
             </g>
@@ -49,9 +49,40 @@
         </div>
       </body>
       <script>
-        function toggle_visibility(id){
+        function toggle_fade(id){
           var e = document.getElementById(id);
-          e.style.visibility= (e.style.visibility == 'hidden' || !e.style.visibility) ? 'visible' : 'hidden';
+          if(e.style.opacity<=0)
+            fade_in(id);
+          else if(e.style.opacity>=1)
+            fade_out(id);
+        }
+        function fade_in(id){
+          var e = document.getElementById(id);
+          e.style.visibility="visible";
+          var id = setInterval(frame,50);
+          var op = 0;
+          function frame(){
+            if(e.style.opacity>=1){
+                clearInterval(id);
+            }else{
+              e.style.opacity=op;
+                op+=0.05;
+            }
+          }
+        }
+        function fade_out(id){
+          var e = document.getElementById(id);
+          var id = setInterval(frame,50);
+          var op = 1;
+          function frame(){
+            if(e.style.opacity<=0){
+                e.style.visibility="hidden";
+                clearInterval(id);
+            }else{
+              e.style.opacity=op;
+                op-=0.05;
+            }
+          }
         }
       </script>
   </html>
