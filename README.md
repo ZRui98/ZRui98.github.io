@@ -1,2 +1,2 @@
 # ZRui98.github.io
-personal website
+personal website, links to projects
