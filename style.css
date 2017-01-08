@@ -4,8 +4,8 @@ a{
 }
 
 #main {
-    width: 50%;
-    height:80%;
+    width: 65%;
+    height:90%;
     margin: auto;
 }
 
@@ -44,9 +44,14 @@ text{
             user-select: none;
 }
 
-.triangle, .project-triangle{
+.display-polygon,.triangle, .link-polygon{
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    fill: #ff9933;
     cursor: pointer;
+}
+
+.display-polygon{
+    cursor:default;
 }
 
 .triangle{
@@ -57,16 +62,11 @@ text{
     fill:#67cbf0;
 }
 
-.project-triangle{
-    fill: #ff9933;
-    cursor: pointer;
-}
-
-.project-triangle:hover {
+.link-polygon:hover {
     fill:#ffa64d;
 }
 
-#projects{
+.fadeable{
     visibility:hidden;
     opacity:0;
 }
