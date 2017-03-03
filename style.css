@@ -1,34 +1,114 @@
 a{
     color:black;
-    display: block;
+    display: table;   
+}
+html,body{
+    height:100%;
+    overflow:hidden;
 }
 
-#main {
+.panel{
+    height:100%;
+    z-index:0;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+
+a[ id= "one" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+
+a[ id= "two" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( -105% );
+    transform: translateY( -105% );
+}
+
+#main-svg {
     width: 65%;
-    height:90%;
+    height:100%;
     margin: auto;
 }
 
-.triangle-container{
-    height:100%;
-    width:100%;
-    position: relative;
-    overflow: hidden;
+#main-projects{
+    width:80%;
+    margin:10%;
 }
 
-p{
-    font-family: sans-serif;
-    text-transform: uppercase;
-    font-weight: 100;
-    font-size:48px;
-    letter-spacing: 3px;
-    position:relative;
+.project{
+    width:22%;
+    padding-bottom:20%;
+    margin:1%;   
     text-align:center;
-    top:30%;
+    background-color:#17b0e8;
+    position:relative;
+    display:inline-block;
+    overflow:hidden;
+}
+.content,.slider-content{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+.slider-content p{
+    font-size:18px;
+    color:#ffffff;
+}
+.content img{
+    width:90%;
+    height:90%;
+    margin:5%;
+}
+
+.slider-content{
+    z-index:1;
+    width:100%;
+    height:100%;
+    top:-100%;
+    transition:0.5s;
+    position:absolute;
+    background-color:rgba(0, 0, 0, .7);
+}
+
+
+.project:hover .slider-content{ 
+    transition:0.5s;
+    top:0;
+}
+
+.project img{
+    align-content:center;
+    max-height:90%;
+    max-width:90%;
+}
+
+.project a{
+    width:100%;
+    height:100%;
+}
+
+p,#two,.project{
+    font-family: 'Titillium Web', sans-serif;
+}
+p{
+    text-align:center;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;   
+    position:relative;
+    font-size:40px;
+}
+#back{
+    padding-left:1%;
+    font-size:25px;
+}
+
+#head-title{
+    font-size:48px;
+    top:30%;
+    letter-spacing: 3px;
+
 }
 
 svg{
