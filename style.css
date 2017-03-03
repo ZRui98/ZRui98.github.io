@@ -65,14 +65,14 @@ a[ id= "two" ]:target ~ #main article.panel {
     width:100%;
     height:100%;
     top:-100%;
-    transition:0.5s;
+    transition:0.6s;
     position:absolute;
     background-color:rgba(0, 0, 0, .7);
 }
 
 
 .project:hover .slider-content{ 
-    transition:0.5s;
+    transition:0.6s;
     top:0;
 }
 
@@ -90,12 +90,14 @@ a[ id= "two" ]:target ~ #main article.panel {
 p,#two,.project{
     font-family: 'Titillium Web', sans-serif;
 }
-p{
-    text-align:center;
+html{
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;   
+    user-select: none;
+}
+p{
+    text-align:center;
     position:relative;
     font-size:40px;
 }
