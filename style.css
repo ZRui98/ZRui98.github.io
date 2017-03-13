@@ -27,9 +27,7 @@ a[ id= "two" ]:target ~ #main .panel {
 
 #main-svg {
     width: 65%;
-    margin-left:17.5%;
-    margin-top:0;
-    margin-bottom:0;
+    margin: 0 auto;
 }
 
 #main-projects{
@@ -120,6 +118,8 @@ p{
 
 svg{
     display:block;
+    height:100%;
+    width:100%;
 }
 
 text{
