@@ -4,29 +4,56 @@ a{
 }
 html,body{
     height:100%;
-    width:100%;
+    width:174%;
+    margin-left:-36.5%;
     overflow:hidden;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .panel{
     height:100vh;
+    width:100vw;
+    float:left;
     z-index:0;
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
 }
 
-a[ id= "one" ]:target ~ #main .panel {
+a[ id= "main-panel" ]:target ~ #main .panel {
     -webkit-transform: translateY( 0px );
     transform: translateY( 0px );
 }
 
-a[ id= "two" ]:target ~ #main .panel {
+a[ id = "about-me-panel" ]:target ~ #main .panel{
+    -webkit-transform: translateX(100%);
+    transform:translateX(100%);
+}
+
+a[ id = "contact-info-panel" ]:target ~ #main .panel{
+    -webkit-transform: translateX(-100%);
+    transform:translateX(-100%);
+}
+
+a[ id = "about-me-panel" ]:target ~ #main .panel{
+    -webkit-transform: translateX(100%);
+    transform:translateX(100%);
+}
+
+a[ id= "projects-panel" ]:target ~ #main .panel {
     -webkit-transform: translateY( -100% );
     transform: translateY( -100% );
 }
 
+#about-me-panel{
+    background-color:#000000;
+}
+
+#contact-info-panel{
+    background-color:#FF0000;
+}
+
 #main-svg {
-    width: 65%;
+    width: 35%;
     margin: 0 auto;
 }
 
@@ -86,14 +113,22 @@ a[ id= "two" ]:target ~ #main .panel {
     height:100%;
     text-decoration:none;
 }
-
-p,#two,.project{
-    font-family: 'Titillium Web', sans-serif;
+#about-me-button>polygon,#projects-button>polygon,#contact-info-button>polygon{
+    transition:transform 0.3s;
+}
+#about-me-button:hover>polygon{
+    transform:matrix(1.2,0,0.115,1,-12,0);
+}
+#projects-button:hover>polygon{
+    transform:matrix(1,0,0,1.2,0,-8.5); 
+    transition-duration: 0.25s ease-in-out;
+}
+#contact-info-button:hover>polygon{
+    transform:matrix(1.2,0,-0.115,1,-12,0);
+    transition-duration: 0.25s ease-in-out;
 }
 html{
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 p{
@@ -132,9 +167,6 @@ text{
     cursor: pointer;
 }
 
-.display-polygon{
-    cursor:default;
-}
 
 .triangle{
     fill: #17b0e8;
@@ -146,9 +178,4 @@ text{
 
 .link-polygon:hover {
     fill:#ffa64d;
-}
-
-.fadeable{
-    visibility:hidden;
-    opacity:0;
 }

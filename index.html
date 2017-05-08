@@ -5,68 +5,47 @@
       <link rel="stylesheet" href="style.css">
       <title>A web page</title>
     </head>
-    <a id="one"></a>
-    <a id="two"></a>
+    <a id="main-panel"></a>
+    <a id="about-me-panel"></a>
+    <a id="contact-info-panel"></a>
+    <a id="projects-panel"></a>
     <body>
-      <section id="main">
-        <article class="panel" id="one">
+      <div id="main">
+        <div class ="panel" id = "about-me-panel" style="color:#FFFFFF;">
+          I am a first year university student studying Computer Science.
+        </div>
+        <div class="panel" id="main-panel">
           <p id ="head-title">ZRUI98</p>
           <div id = "main-svg">
-            <svg viewBox="0 0 224 140">
+            <svg viewBox="0 0 120 92">
               <a class ="triangle" xlink:href = "https://github.com/ZRui98">
-                <text x="100" y="15" fill="black" font-size="7px" text-decoration="underline">GITHUB</text>
+                <text x="48 " y="30" fill="black" font-size="7px" text-decoration="underline">GITHUB</text>
               </a>
-
-              <g class ="triangle" onclick="toggle_fade('resume');">
-                <polygon points ="143 0 118 43 168 43"/>
-                <text x="130" y="37" fill="white" font-size="7px">RESUME</text>
-              </g>            
-              <g class = "fadeable display-polygon" id ="resume">
-                  <polygon points ="148 0 198 0 224 43 174 43"/>
-                  <text x="155" y="5" fill="black" font-size="4px">Click</a></text>
-                  <a class ="link-polygon" xlink:href="#">
-                    <text x="164" y="5" fill="white" font-size="4px">Here</text>
-                  </a>
-              </g>
-
-              <g class="triangle" onclick ="toggle_fade('about-me');">
-                <polygon points ="56 43 106 43 81 0"/>
-                <text x="64" y="37" fill="white" font-size="7px">ABOUT ME</text>
-              </g>
-              <g class = "fadeable display-polygon" id ="about-me">
-                  <polygon points ="0 43 50 43 75 0 25 0"/>
-                  <text x="26" y="5" fill="black" font-size="4px">I am a 1st year university</text>
-                  <text x="23" y="10" fill="black" font-size="4px">student studying computer</text>
-                  <text x="20" y="15" fill="black" font-size="4px">science.</text>
-              </g>
-
-              <g class = "triangle" onclick="toggle_fade('other');">
-                <polygon points ="143 91 118 48 168 48"/>
-                <text x="132" y="57" fill="white" font-size="7px">OTHER</text>
-              </g>
-              <g class = "fadeable display-polygon" id ="other">
-                  <polygon points ="174 48 224 48 199 92 149 92"/>
-              </g>
-              
-              <g class="triangle" onclick ="toggle_fade('contact-info')">
-                <polygon points ="81 91 56 48 106 48"/>
-                <text x="67" y="57" fill="white" font-size="7px">CONTACT</text>
-                <text x="73" y="65" fill="white" font-size="7px">INFO</text>
-              </g>
-              <g class = "fadeable display-polygon" id ="contact-info">
-                  <polygon points ="0 48 50 48 75 92 25 92"/>
-              </g>
-              <a class = "triangle" xlink:href="#two">
-                <polygon points ="87 91 137 91 112 48"/>
-                <text x="97" y="85" fill="white" font-size="7px">PROJECTS</text>
+              <a class="triangle" id="about-me-button"xlink:href="#about-me-panel">
+                <polygon points ="35 43 10 0 60 0"/>
+                <text x="18" y="9" fill="white" font-size="7px">ABOUT ME</text>
+              </a>
+              <a class = "triangle" id="contact-info-button" xlink:href="#contact-info-panel" >
+                <polygon points ="85 43 60 0 110 0" />
+                <text x="70" y="9" fill="white" font-size="7px">CONTACT</text>
+                <text x="76" y="16" fill="white" font-size="7px">INFO</text>
+              </a>
+              <a class = "triangle" id="projects-button"xlink:href="#projects-panel">
+                <polygon points ="60 84 35 43 85 43"/>
+                <text x="43" y="52" fill="white" font-size="7px">PROJECTS</text>
               </a>
             </svg>
           </div>
-        </article>
-        <article class ="panel" id ="two">                  
+        </div>
+        <div class ="panel" id = "contact-info-panel">
+          EMAIL:<br>TEL:
+        </div>
+        <div class ="panel" id ="filler">
+        </div>
+        <div class ="panel" id ="projects-panel">                  
               <div id = "main-projects">
                 <p>PROJECTS</p>
-                <a id="back" href="#one">
+                <a id="back" href="#main-panel">
                     BACK
                 </a>
                 <div class ="project" >
@@ -127,8 +106,8 @@
                   </div>
                 </div>     
               </g>
-        </article>
-      </section>
+        </div>
+      </div>
     </body>
       <script>
         function toggle_fade(id){
