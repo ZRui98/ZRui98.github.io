@@ -19,32 +19,32 @@ html,body{
     transition: transform 0.5s ease-in-out;
 }
 
-a[ id= "main-panel" ]:target ~ #main .panel {
+a[ id= "menu" ]:target ~ #main .panel {
     -webkit-transform: translateY( 0px );
     transform: translateY( 0px );
 }
 
-a[ id = "about-me-panel" ]:target ~ #main .panel{
+a[ id = "about-me" ]:target ~ #main .panel{
     -webkit-transform: translateX(100%);
     transform:translateX(100%);
 }
 
-a[ id = "contact-info-panel" ]:target ~ #main .panel{
+a[ id = "contact-info" ]:target ~ #main .panel{
     -webkit-transform: translateX(-100%);
     transform:translateX(-100%);
 }
 
-a[ id = "about-me-panel" ]:target ~ #main .panel{
+a[ id = "about-me" ]:target ~ #main .panel{
     -webkit-transform: translateX(100%);
     transform:translateX(100%);
 }
 
-a[ id= "projects-panel" ]:target ~ #main .panel {
+a[ id= "projects" ]:target ~ #main .panel {
     -webkit-transform: translateY( -100% );
     transform: translateY( -100% );
 }
 
-#about-me-panel,#projects-panel,#contact-info-panel{
+#about-me,#projects,#contact-info{
     background-color:#e3e3e3;
 }
 
@@ -71,12 +71,12 @@ a[ id= "projects-panel" ]:target ~ #main .panel {
     display:inline-block;
     overflow:hidden;
 }
-.content,.slider-content{
+.content,.slider-content,.static-content{
     position:absolute;
     width:100%;
     height:100%;
 }
-.slider-content p{
+.slider-content p,.static-content p{
     font-size:1.8vh;
     color:#ffffff;
 }
@@ -88,19 +88,24 @@ a[ id= "projects-panel" ]:target ~ #main .panel {
 .slider-content{
     z-index:1;
     width:100%;
-    height:100%;
-    top:-100%;
+    height:68%;
+    top:100%;
     transition:0.6s;
     position:absolute;
     background-color:rgba(0, 0, 0, .7);
 }
 
+.static-content{
+    width:100%;
+    height:32%;
+    background-color:rgba(0, 0, 0, .7);
+}
 
 .project:hover .slider-content{ 
     -webkit-transition: 0.6s;
     -moz-transition: 0.6s;
     transition:0.6s;
-    top:0;
+    top:32%;
 }
 
 
@@ -128,7 +133,6 @@ html{
 p{
     text-align:center;
     position:relative;
-    font-size:40px;
 }
 .text-link{
     transition:color 0.25s;
@@ -138,10 +142,9 @@ p{
     color:#89bdd3;
 }
 
-#head-title{
+.head-title{
     font-size:48px;
     letter-spacing: 3px;
-
 }
 
 svg{
