@@ -44,12 +44,8 @@ a[ id= "projects-panel" ]:target ~ #main .panel {
     transform: translateY( -100% );
 }
 
-#about-me-panel{
-    background-color:#000000;
-}
-
-#contact-info-panel{
-    background-color:#FF0000;
+#about-me-panel,#projects-panel,#contact-info-panel{
+    background-color:#e3e3e3;
 }
 
 #main-svg {
@@ -114,18 +110,16 @@ a[ id= "projects-panel" ]:target ~ #main .panel {
     text-decoration:none;
 }
 #about-me-button>polygon,#projects-button>polygon,#contact-info-button>polygon{
-    transition:transform 0.3s;
+    transition:transform 0.3s ease-in-out;
 }
 #about-me-button:hover>polygon{
     transform:matrix(1.2,0,0.115,1,-12,0);
 }
 #projects-button:hover>polygon{
     transform:matrix(1,0,0,1.2,0,-8.5); 
-    transition-duration: 0.25s ease-in-out;
 }
 #contact-info-button:hover>polygon{
     transform:matrix(1.2,0,-0.115,1,-12,0);
-    transition-duration: 0.25s ease-in-out;
 }
 html{
     -webkit-user-select: none;
@@ -136,9 +130,12 @@ p{
     position:relative;
     font-size:40px;
 }
-#back{
-    padding-left:1%;
-    font-size:25px;
+.text-link{
+    transition:color 0.25s;
+}
+
+.text-link:hover{
+    color:#89bdd3;
 }
 
 #head-title{
@@ -160,22 +157,20 @@ text{
         -ms-user-select: none;
             user-select: none;
 }
-
-.display-polygon,.triangle, .link-polygon{
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    fill: #ff9933;
-    cursor: pointer;
+#center-triangle>text{
+    fill:#000000;
+    transition:color 2s;
+}
+#center-triangle:hover>text{
+    fill:#ffa64d;
 }
 
-
 .triangle{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
     fill: #17b0e8;
 }
 
 .triangle:hover {
     fill:#67cbf0;
-}
-
-.link-polygon:hover {
-    fill:#ffa64d;
 }
