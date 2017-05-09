@@ -3,10 +3,9 @@ a{
     display: table;   
 }
 html,body{
-    height:100%;
-    width:174%;
-    margin-left:-36.5%;
-    overflow:hidden;
+    height:100vh;
+    width:300vw;
+    margin-left:-50vw;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -43,7 +42,9 @@ a[ id= "projects" ]:target ~ #main .panel {
     -webkit-transform: translateY( -100% );
     transform: translateY( -100% );
 }
-
+#about-me,#contact-info{
+    text-align:center;
+}
 #about-me,#projects,#contact-info{
     background-color:#e3e3e3;
 }
@@ -51,6 +52,7 @@ a[ id= "projects" ]:target ~ #main .panel {
 #main-svg {
     width: 35%;
     margin: 0 auto;
+    padding-top:8%;
 }
 
 #main-projects{
@@ -71,15 +73,18 @@ a[ id= "projects" ]:target ~ #main .panel {
     display:inline-block;
     overflow:hidden;
 }
+
 .content,.slider-content,.static-content{
     position:absolute;
     width:100%;
     height:100%;
 }
+
 .slider-content p,.static-content p{
     font-size:1.8vh;
     color:#ffffff;
 }
+
 .content img{
     width:100%;
     height:100%;
@@ -114,22 +119,28 @@ a[ id= "projects" ]:target ~ #main .panel {
     height:100%;
     text-decoration:none;
 }
+
 #about-me-button>polygon,#projects-button>polygon,#contact-info-button>polygon{
     transition:transform 0.3s ease-in-out;
 }
+
 #about-me-button:hover>polygon{
     transform:matrix(1.2,0,0.115,1,-12,0);
 }
+
 #projects-button:hover>polygon{
     transform:matrix(1,0,0,1.2,0,-8.5); 
 }
+
 #contact-info-button:hover>polygon{
     transform:matrix(1.2,0,-0.115,1,-12,0);
 }
+
 html{
     -webkit-user-select: none;
     user-select: none;
 }
+
 p{
     text-align:center;
     position:relative;
@@ -160,12 +171,22 @@ text{
         -ms-user-select: none;
             user-select: none;
 }
-#center-triangle>text{
-    fill:#000000;
-    transition:color 2s;
+
+.center-triangle>text{
+    animation: colors 5s infinite ease-in-out;
 }
-#center-triangle:hover>text{
-    fill:#ffa64d;
+
+@keyframes colors{
+    10%{fill:#1b252a;}
+    20%{fill:#364b54;}
+    30%{fill:#52717e}
+    40%{fill:#6d97a8}
+    50%{fill:#89bdd3}
+    60%{fill:#89bdd3}
+    70%{fill:#6d97a8}
+    80%{fill:#52717e}
+    90%{fill:#364b54;}
+    10%{fill:#1b252a;}
 }
 
 .triangle{
