@@ -3,9 +3,9 @@ a{
     display: table;   
 }
 body{
+    border-style:solid;
     height:200%;
-    width:300%;
-    overflow:hidden;
+    width:300vw;
     margin-left:-100vw;
     font-family: 'Titillium Web', sans-serif;
 }
