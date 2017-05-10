@@ -3,7 +3,6 @@ a{
     display: table;   
 }
 body{
-    border-style:solid;
     height:200%;
     width:300vw;
     margin-left:-100vw;
