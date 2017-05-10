@@ -2,10 +2,11 @@ a{
     color:black;
     display: table;   
 }
-html,body{
-    height:100vh;
+body{
+    height:200vh;
     width:300vw;
-    margin-left:-50vw;
+    overflow:hidden;
+    margin-left:-100vw;
     font-family: 'Titillium Web', sans-serif;
 }
 
