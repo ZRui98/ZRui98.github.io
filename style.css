@@ -1,6 +1,5 @@
 a{
-    color:black;
-    display: table;   
+    color:black;  
 }
 body{
     height:200%;
@@ -14,33 +13,35 @@ body{
     height:100vh;
     width:100vw;
     float:left;
-    z-index:0;
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
 }
 
 a[ id= "menu" ]:target ~ #main .panel {
-    -webkit-transform: translateY( 0px );
-    transform: translateY( 0px );
+    -ms-transform:translateY(0px);
+    -webkit-transform:translateY(0px);
+    -moz-transform:translateY(0px);
+    transform:translateY(0px);
 }
 
 a[ id = "about-me" ]:target ~ #main .panel{
-    -webkit-transform: translateX(100%);
+    -ms-transform:translateX(100%);
+    -webkit-transform:translateX(100%);
+    -moz-transform:translateX(100%);
     transform:translateX(100%);
 }
 
 a[ id = "contact-info" ]:target ~ #main .panel{
-    -webkit-transform: translateX(-100%);
+    -ms-transform:translateX(-100%);
+    -webkit-transform:translateX(-100%);
+    -moz-transform:translateX(-100%);
     transform:translateX(-100%);
 }
 
-a[ id = "about-me" ]:target ~ #main .panel{
-    -webkit-transform: translateX(100%);
-    transform:translateX(100%);
-}
-
 a[ id= "projects" ]:target ~ #main .panel {
+    -ms-transform:translateY(-100%);
     -webkit-transform: translateY( -100% );
+    -moz-transform:translateY(-100%);
     transform: translateY( -100% );
 }
 #about-me,#contact-info{
@@ -49,8 +50,11 @@ a[ id= "projects" ]:target ~ #main .panel {
 #about-me,#projects,#contact-info{
     background-color:#e3e3e3;
 }
+#projects a{
+    display:table;
+}
 
-#main-svg {
+#main-svg{
     width: 35%;
     margin: 0 auto;
     padding-top:8%;
@@ -92,12 +96,10 @@ a[ id= "projects" ]:target ~ #main .panel {
 }
 
 .slider-content{
-    z-index:1;
     width:100%;
     height:68%;
     top:100%;
     transition:0.6s;
-    position:absolute;
     background-color:rgba(0, 0, 0, .7);
 }
 
@@ -108,45 +110,85 @@ a[ id= "projects" ]:target ~ #main .panel {
 }
 
 .project:hover .slider-content{ 
+    -ms-transition: 0.6s;
     -webkit-transition: 0.6s;
     -moz-transition: 0.6s;
     transition:0.6s;
     top:32%;
 }
 
-
 .project a{
     width:100%;
     height:100%;
-    text-decoration:none;
 }
 
 #about-me-button>polygon,#projects-button>polygon,#contact-info-button>polygon{
+    -ms-transition:transform 0,3s ease-in-out;
+    -webkit-transition: transform 0,3s ease-in-out;
+    -moz-transition:transform 0,3s ease-in-out;
     transition:transform 0.3s ease-in-out;
 }
 
 #about-me-button:hover>polygon{
+    -ms-transform:matrix(1.2,0,0.115,1,-12,0);
+    -webkit-transform:matrix(1.2,0,0.115,1,-12,0);
+    -moz-transform:matrix(1.2,0,0.115,1,-12,0);
     transform:matrix(1.2,0,0.115,1,-12,0);
 }
 
 #projects-button:hover>polygon{
+    -ms-transform:matrix(1,0,0,1.2,0,-8.5); 
+    -webkit-transform:matrix(1,0,0,1.2,0,-8.5); 
+    -moz-transform:matrix(1,0,0,1.2,0,-8.5);
     transform:matrix(1,0,0,1.2,0,-8.5); 
 }
 
 #contact-info-button:hover>polygon{
+    -ms-transform:matrix(1.2,0,-0.115,1,-12,0);
+    -webkit-transform:matrix(1.2,0,-0.115,1,-12,0);
+    -moz-transform:matrix(1.2,0,-0.115,1,-12,0);
     transform:matrix(1.2,0,-0.115,1,-12,0);
 }
 
-html{
-    -webkit-user-select: none;
-    user-select: none;
+.bordered{
+    display:inline-block;
+    border-color:#17B0E8;
+    border-width:20px;
+    border-style:none solid none solid;
+    padding-top: 80px;
+    padding-bottom:80px;
+    padding-left:10px;
+    padding-right:30px;
+    background-color:#EEEDF3;
 }
+
+.bordered th{
+    font-size:64px;
+    padding-right:30px;
+    border-right:solid;
+}
+
+.bordered td a{
+    padding-top:5%;
+    padding-bottom:5%;
+    float:left;
+    line-height:90%;
+}
+
+.bordered img{
+    float:right;
+}
+
 
 p{
     text-align:center;
     position:relative;
 }
+
 .text-link{
+    outline:0;
+    font-size:25px;
+    white-space: nowrap;
     transition:color 0.25s;
 }
 
@@ -167,14 +209,36 @@ svg{
 
 text{
     font-family: 'Titillium Web', sans-serif;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+}
+
+.no-select{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 .center-triangle>text{
-    animation: colors 5s infinite ease-in-out;
+    -ms-animation:colors 10s infinite ease-in-out;
+    -webkit-animation:colors 10s infinite ease-in-out;
+    -moz-animation:colors 10s infinite ease-in-out;
+    animation: colors 10s infinite ease-in-out;
+}
+
+@-webkit-keyframes colors{
+    10%{fill:#1b252a;}
+    20%{fill:#364b54;}
+    30%{fill:#52717e}
+    40%{fill:#6d97a8}
+    50%{fill:#89bdd3}
+    60%{fill:#89bdd3}
+    70%{fill:#6d97a8}
+    80%{fill:#52717e}
+    90%{fill:#364b54;}
+    10%{fill:#1b252a;}
 }
 
 @keyframes colors{
