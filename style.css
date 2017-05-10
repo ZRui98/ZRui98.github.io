@@ -3,8 +3,8 @@ a{
     display: table;   
 }
 body{
-    height:200vh;
-    width:300vw;
+    height:200%;
+    width:300%;
     overflow:hidden;
     margin-left:-100vw;
     font-family: 'Titillium Web', sans-serif;
