@@ -44,12 +44,15 @@ a[ id= "projects" ]:target ~ #main .panel {
     -moz-transform:translateY(-100%);
     transform: translateY( -100% );
 }
+
 #about-me,#contact-info{
     text-align:center;
 }
+
 #about-me,#projects,#contact-info{
     background-color:#e3e3e3;
 }
+
 #projects a{
     display:table;
 }
@@ -69,7 +72,7 @@ a[ id= "projects" ]:target ~ #main .panel {
 
 .project{
     width:22%;
-    padding-bottom:16%;
+    padding-bottom:13vw;
     margin:1%;   
     text-align:center;
     background-color:#17b0e8;
@@ -137,10 +140,10 @@ a[ id= "projects" ]:target ~ #main .panel {
 }
 
 #projects-button:hover>polygon{
-    -ms-transform:matrix(1,0,0,1.2,0,-8.5); 
-    -webkit-transform:matrix(1,0,0,1.2,0,-8.5); 
-    -moz-transform:matrix(1,0,0,1.2,0,-8.5);
-    transform:matrix(1,0,0,1.2,0,-8.5); 
+    -ms-transform:matrix(1,0,0,1.2,0,-8.6); 
+    -webkit-transform:matrix(1,0,0,1.2,0,-8.6); 
+    -moz-transform:matrix(1,0,0,1.2,0,-8.6);
+    transform:matrix(1,0,0,1.2,0,-8.6); 
 }
 
 #contact-info-button:hover>polygon{
@@ -153,12 +156,12 @@ a[ id= "projects" ]:target ~ #main .panel {
 .bordered{
     display:inline-block;
     border-color:#17B0E8;
-    border-width:20px;
+    border-width:1vw;
     border-style:none solid none solid;
-    padding-top: 80px;
-    padding-bottom:80px;
-    padding-left:10px;
-    padding-right:30px;
+    padding-top: 5%;
+    padding-bottom:5%;
+    padding-left:1%;
+    padding-right:2%;
     background-color:#EEEDF3;
 }
 
@@ -176,9 +179,12 @@ a[ id= "projects" ]:target ~ #main .panel {
 }
 
 .bordered img{
+    max-width:2.5vw;
+    max-height:2.5vw;
+    width:auto;
+    height:auto;
     float:right;
 }
-
 
 p{
     text-align:center;
@@ -187,7 +193,7 @@ p{
 
 .text-link{
     outline:0;
-    font-size:25px;
+    font-size:1.5vw;
     white-space: nowrap;
     transition:color 0.25s;
 }
@@ -197,7 +203,8 @@ p{
 }
 
 .head-title{
-    font-size:48px;
+    font-size:3.2vw;
+    line-height:0px;
     letter-spacing: 3px;
 }
 
@@ -226,19 +233,6 @@ text{
     -webkit-animation:colors 10s infinite ease-in-out;
     -moz-animation:colors 10s infinite ease-in-out;
     animation: colors 10s infinite ease-in-out;
-}
-
-@-webkit-keyframes colors{
-    10%{fill:#1b252a;}
-    20%{fill:#364b54;}
-    30%{fill:#52717e}
-    40%{fill:#6d97a8}
-    50%{fill:#89bdd3}
-    60%{fill:#89bdd3}
-    70%{fill:#6d97a8}
-    80%{fill:#52717e}
-    90%{fill:#364b54;}
-    10%{fill:#1b252a;}
 }
 
 @keyframes colors{
