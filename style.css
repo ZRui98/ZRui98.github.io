@@ -1,10 +1,9 @@
 a{
     color:black;  
 }
+html, body {margin: 0; height: 100%; overflow: hidden}
 body{
-    height:200%;
     width:300vw;
-    overflow:hidden;
     margin-left:-100vw;
     font-family: 'Titillium Web', sans-serif;
 }
