@@ -1,7 +1,9 @@
 a{
+    outline:0;
     color:black;  
 }
 body{
+    margin: 0 auto;
     height:200%;
     width:300vw;
     overflow:hidden;
@@ -17,28 +19,28 @@ body{
     transition: transform 0.5s ease-in-out;
 }
 
-a[ id= "menu" ]:target ~ #main .panel {
+a#menu:target ~ #main .panel {
     -ms-transform:translateY(0px);
     -webkit-transform:translateY(0px);
     -moz-transform:translateY(0px);
     transform:translateY(0px);
 }
 
-a[ id = "about-me" ]:target ~ #main .panel{
+a#about-me:target ~ #main .panel{
     -ms-transform:translateX(100%);
     -webkit-transform:translateX(100%);
     -moz-transform:translateX(100%);
     transform:translateX(100%);
 }
 
-a[ id = "contact-info" ]:target ~ #main .panel{
+a#contact-info:target ~ #main .panel{
     -ms-transform:translateX(-100%);
     -webkit-transform:translateX(-100%);
     -moz-transform:translateX(-100%);
     transform:translateX(-100%);
 }
 
-a[ id= "projects" ]:target ~ #main .panel {
+a#projects:target ~ #main .panel {
     -ms-transform:translateY(-100%);
     -webkit-transform: translateY( -100% );
     -moz-transform:translateY(-100%);
