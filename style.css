@@ -1,12 +1,13 @@
 a{
     outline:0;
     color:black;  
+    outline:0;
 }
+html, body {margin: 0; height: 100%; overflow: hidden}
 body{
     margin: 0 auto;
     height:200%;
     width:300vw;
-    overflow:hidden;
     margin-left:-100vw;
     font-family: 'Titillium Web', sans-serif;
 }
@@ -53,6 +54,7 @@ a#projects:target ~ #main .panel {
 
 #about-me,#projects,#contact-info{
     background-color:#e3e3e3;
+    color:black;
 }
 
 #projects a{
