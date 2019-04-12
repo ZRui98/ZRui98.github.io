@@ -1,2 +1,2 @@
 # ZRui98.github.io
-personal website, links to projects
+This is my personal website built using only HTML5 and CSS3.
