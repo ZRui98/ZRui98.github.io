@@ -57,10 +57,6 @@ a#projects:target ~ #main .panel {
     color:black;
 }
 
-#projects a{
-    display:table;
-}
-
 #main-svg{
     width: 35%;
     margin: 0 auto;
@@ -69,64 +65,37 @@ a#projects:target ~ #main .panel {
 
 #main-projects{
     width:80%;
+	height:100%;
     margin-left:10%;
-    margin-top:0;
-    margin-bottom:0;
 }
 
 .project{
-    width:22%;
-    padding-bottom:13vw;
-    margin:1%;   
-    text-align:center;
-    background-color:#17b0e8;
-    border-style:none;
-    position:relative;
-    display:inline-block;
-    overflow:hidden;
+    width:98%;
+	height:18%;
+	padding:1%;
+	text-align:center;
+    background-color:#eeedf3;
+	font-size:2.2vmin;
+	margin-bottom:2vh;
 }
 
-.content,.slider-content,.static-content{
-    position:absolute;
-    width:100%;
-    height:100%;
+.project .project-name {
+	font-weight:bold;
+	text-decoration:underline;
+	font-size:2.6vmin;
 }
 
-.slider-content p,.static-content p{
-    font-size:1.8vh;
-    color:#ffffff;
+.project .technologies {
+	font-size:2.4vmin;
+	font-weight:bold;
+	color:#89bdd3;
 }
 
-.content img{
-    width:100%;
-    height:100%;
-}
-
-.slider-content{
-    width:100%;
-    height:68%;
-    top:100%;
-    transition:0.6s;
-    background-color:rgba(0, 0, 0, .7);
-}
-
-.static-content{
-    width:100%;
-    height:32%;
-    background-color:rgba(0, 0, 0, .7);
-}
-
-.project:hover .slider-content{ 
-    -ms-transition: 0.6s;
-    -webkit-transition: 0.6s;
-    -moz-transition: 0.6s;
-    transition:0.6s;
-    top:32%;
-}
-
-.project a{
-    width:100%;
-    height:100%;
+.project a {
+	width:0;
+	font-size:2.0vmin;
+	padding-left:1vw;
+	padding-right:1vw;
 }
 
 #about-me-button>polygon,#projects-button>polygon,#contact-info-button>polygon{
@@ -166,7 +135,7 @@ a#projects:target ~ #main .panel {
     padding-bottom:5%;
     padding-left:1%;
     padding-right:2%;
-    background-color:#EEEDF3;
+    background-color:#eeedf3;
 }
 
 .bordered th{
