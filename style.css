@@ -34,6 +34,11 @@ a#about-me:target ~ #main .panel{
     transform:translateX(100%);
 }
 
+#about-me p {
+	margin-left: 17vw;
+	margin-right: 17vw;
+}
+
 a#contact-info:target ~ #main .panel{
     -ms-transform:translateX(-100%);
     -webkit-transform:translateX(-100%);
