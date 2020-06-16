@@ -1,10 +1,10 @@
-a{
+a {
     outline:0;
     color:black;  
     outline:0;
 }
 html, body {margin: 0; height: 100%; overflow: hidden}
-body{
+body {
     margin: 0 auto;
     height:200%;
     width:300vw;
@@ -12,7 +12,7 @@ body{
     font-family: 'Titillium Web', sans-serif;
 }
 
-.panel{
+.panel {
     height:100vh;
     width:100vw;
     float:left;
@@ -27,7 +27,7 @@ a#menu:target ~ #main .panel {
     transform:translateY(0px);
 }
 
-a#about-me:target ~ #main .panel{
+a#about-me:target ~ #main .panel {
     -ms-transform:translateX(100%);
     -webkit-transform:translateX(100%);
     -moz-transform:translateX(100%);
@@ -53,13 +53,17 @@ a#projects:target ~ #main .panel {
     transform: translateY( -100% );
 }
 
-#about-me,#contact-info{
+#about-me, #contact-info{
     text-align:center;
 }
 
-#about-me,#projects,#contact-info{
+#about-me, #projects, #contact-info{
     background-color:#e3e3e3;
     color:black;
+}
+
+#menu {
+	background-color: #eeedf3;
 }
 
 #main-svg{
@@ -79,7 +83,7 @@ a#projects:target ~ #main .panel {
 	height:18%;
 	padding:1%;
 	text-align:center;
-    background-color:#eeedf3;
+    background-color:#e8e8e8;
 	font-size:2.2vmin;
 	margin-bottom:2vh;
 }
@@ -232,3 +236,4 @@ text{
 .triangle:hover {
     fill:#67cbf0;
 }
+
