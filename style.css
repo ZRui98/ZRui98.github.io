@@ -1,11 +1,12 @@
-/* a { */
-/*     outline:0; */
-/*     color:black; */  
-/*     outline:0; */
-/* } */
+:root {
+	--main-bg-color: #282828;
+	--main-yellow-color: #d79921;
+	--main-fg-color: #ebdbb2;
+}
 
 html {
 	scroll-behavior: smooth;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 html, body {
@@ -17,25 +18,48 @@ html, body {
 	width: 100vw;
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top: 50px;
-	height: calc(100% - 50px);
-	border-style: solid;
+	padding-top: 80px;
+	height: calc(100% - 80px);
+	color: var(--main-fg-color);
+	background-color: var(--main-bg-color);
 }
 
 #navbar {
+	display: flex;
+	justify-content: space-around;
 	overflow: hidden;
 	position: fixed;
 	top: 0;
 	width: 100%;
+	background-color: var(--main-bg-color);
+	text-a
+}
+
+#navbar ul {
+	list-style-type: none;
+	margin 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#navbar li {
+	margin: 0;
+	float: left;
 }
 
 #navbar a {
+	margin: 0;
 	float: left;
 	display: block;
-	color: green;
+	color: var(--main-yellow-color);
+	border-bottom: solid 5px;
+	border-color: var(--main-bg-color);
 	text-align: center;
-	padding: 14px 16px;
+	padding: 6px 18px 3px 18px;
 	text-decoration: none;
 	font-size: 17px;
 }
 
+#navbar a:hover {
+	border-bottom-color: #d65d0e;
+}
