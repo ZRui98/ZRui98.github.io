@@ -1,103 +1,28 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0" />
-      <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="icon" href="res/favicon.ico" type="image/x-icon"/>
-      <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon"/>
-      <link rel="stylesheet" href="style.css"/>
-      <title>zrui.dev</title>
-    </head>
-    <a id="menu"></a>
-    <a id="about-me"></a>
-    <a id="contact-info"></a>
-    <a id="projects"></a>
-    <body>
-      <div id="main">
-        <div class ="panel" id = "about-me" style="color:#000000;">
-          <p class ="head-title">ABOUT ME</p>
-            <p style="font-size:1.2vw">
-              I am a fourth year university student studying computer science. I enjoy working in Front End and Back End development. Fan of cryptography. 
-            </p>
-            <p style="font-size:1.2vw">
-				My interests outside of software development are: reading, swimming, and music.
-            </p>
-            <a class="text-link" href="#menu">BACK</a>
-        </div>
-        <div class="panel" id="menu">
-          <div ondragstart="return false;" ondrop="return false;" class = "no-select" id = "main-svg">
-            <svg viewBox="0 0 120 92">
-              <defs>
-                <pattern id="pattern1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-                    <image height="1" width="1" preserveAspectRatio="none" xlink:href="https://s-media-cache-ak0.pinimg.com/originals/b5/af/27/b5af2773ed1e0ba63eb28cc3ef688e45.jpg" />
-                </pattern>
-              </defs>
-              <a class="center-triangle">
-                <polygon fill="url(#pattern1)" points="60 0 35 43 85 43"/>
-                <text class ="no-select" x="44 " y="38" font-size="10px" text-decoration="underline">ZRUI98</text>
-              </a>
-              <a class="triangle" id="about-me-button"xlink:href="#about-me">
-                <polygon points ="35 43 10 0 60 0"/>
-                <text x="18" y="9" fill="white" font-size="7px">ABOUT ME</text>
-              </a>
-              <a class = "triangle" id="contact-info-button" xlink:href="#contact-info" >
-                <polygon points ="85 43 60 0 110 0" />
-                <text x="70" y="9" fill="white" font-size="7px">CONTACT</text>
-                <text x="76" y="16" fill="white" font-size="7px">INFO</text>
-              </a>
-              <a class = "triangle" id="projects-button"xlink:href="#projects">
-                <polygon points ="60 84 35 43 85 43"/>
-                <text x="43" y="52" fill="white" font-size="7px">PROJECTS</text>
-              </a>
-            </svg>
-          </div>
-        </div>
-        <div class ="panel" id = "contact-info">
-          <p class ="head-title">CONTACT INFO</p>   
-          <table class ="bordered">
-            <th rowspan="4"><p style="font-size:3.5vw; line-height:0%;">Rui Zhu</p><p style="line-height:0%; font-size:1.5vw;">Software Developer</th>
-            <tr class ="pointer-cursor text-link" onclick="location.href='mailto:ciguatera.z.rui@gmail.ca'">
-				<td><i class="fa fa-envelope" style="font-size:2.3vw;" alt="Email Icon"></i></td>
-              <td>&nbsp <u>ciguatera.z.rui@gmail.com</u></td>
-            </tr>  
-            <tr class ="pointer-cursor text-link" onclick="location.href='https://ZRui98.github.io/res/resume.pdf'">
-				<td><i class="fa fa-file" style="font-size:2.3vw;" alt="Email Icon"></i></td>
-              <td>&nbsp<u>Resume</u></td>
-            </tr>  
-            <tr class ="pointer-cursor text-link" onclick="location.href='https://github.com/ZRui98'">
-				<td><i class="fa fa-github" style="font-size:2.5vw;" alt="Github Icon"></i></td>
-              <td>&nbsp<u>github.com/ZRui98</u></td>
-            </tr>
-          </table><br>
-          <a class="pointer-cursor text-link" href="#menu">BACK</a>
-        </div>
-        <div class ="panel" id ="filler">
-        </div>
-        <div class ="panel" id ="projects">                  
-              <div id = "main-projects">
-                <p class ="head-title">PROJECTS</p>
-                <a class="text-link" style="padding-left:1%;" href="#menu">
-                    BACK
-                </a>
-				<div class = "project">
-					<div class="project-name">Matrix Calculator</div>
-					<div class="technologies">React, Redux, TypeScript</div>
-					<div class="description">
-						This is a SPA that is used to perform simple matrix operations such as finding the RREF, multiplication, and transpose
-					</div>
-					<a class="text-link" href="https://zrui98.github.io/matrix-calculator/"><i class="fa fa-play" aria-hidden="true"></i>Live Demo</a>
-					<a class="text-link" href="https://github.com/ZRui98/matrix-calculator/"><i class="fa fa-github" aria-hidden="true"></i>Source Code</a>
-				</div>
-				<div class = "project">
-					<div class="project-name">T3D</div>
-					<div class="technologies">Java</div>
-					<div class="description">
-						A pseudo-3D tower defense game written with raycasting for rendering and simple pathfinding via A*.
-					</div>
-					<a class="text-link" href="https://github.com/ZRui98/T3D/"><i class="fa fa-github" aria-hidden="true"></i>Source Code</a>
-				</div>
-        </div>
-      </div>
-    </body>
-  </html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0" />
+		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="res/favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="style.css"/>
+		<title>zrui.dev</title>
+	</head>
+	<body>
+		<div id="navbar">
+			<a href="#about">About Me</a>
+			<a href="#projects">Projects</a>
+			<a href="#contact">Contact Info</a>
+		</div>
+		<div class="section" id="about">
+			ABOUT ME
+		</div>
+		<div class="section" id="projects">			
+			PROJECTS
+		</div>
+		<div class="section" id="contact">
+			CONTACT INFO
+		</div>
+	</body>
+</html>
