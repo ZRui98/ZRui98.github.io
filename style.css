@@ -32,7 +32,7 @@
 .footer {
 	position: absolute;
 	left: 50%;
-	bottom: 12%;
+	bottom: 5vh;
 	z-index: 1;
 	transform: translate(-50%, -50%);
 	margin: 0 auto;
@@ -56,6 +56,7 @@ b {
 	-webkit-box-shadow: 23px 24px 15px -10px rgba(20,20,20,1);
 	-moz-box-shadow: 23px 24px 15px -10px rgba(20,20,20,1);
 	box-shadow: 23px 24px 15px -10px rgba(20,20,20,1);
+	font-size: 0.9rem;
 }
 
 .gt-list {
@@ -75,7 +76,7 @@ b {
 html {
 	scroll-behavior: smooth;
     font-family: 'Roboto Mono', monospace;
-	font-size: 18px;
+	font-size: 1rem;
 }
 
 html, body {
@@ -88,7 +89,7 @@ html, body {
 	padding-left: var(--margin-body);
 	padding-right: var(--margin-body);
 	padding-top: 80px;
-	height: calc(100% - 80px);
+	min-height: calc(100% - 80px);
 	color: var(--main-fg-color);
 	background-color: var(--main-bg-color);
 }
@@ -134,7 +135,7 @@ html, body {
 	border-color: var(--main-bg-color);
 	text-align: center;
 	padding: 6px 13px 3px 13px;
-	font-size: 20px;
+	font-size: 1.2rem;
 }
 
 a {
