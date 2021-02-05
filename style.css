@@ -59,6 +59,7 @@ b {
 	padding: 0px 20px 0px 20px;
 	margin: 40px;
 	width: 600px;
+	min-width: 240px;
 	background: var(--main-off-bg-color);
 	-webkit-box-shadow: 23px 24px 15px -10px rgba(20,20,20,1);
 	-moz-box-shadow: 23px 24px 15px -10px rgba(20,20,20,1);
@@ -66,14 +67,25 @@ b {
 	font-size: 0.9rem;
 }
 
+.hash-list {
+	list-style-type: '# ';
+	list-style-position: outside;
+	padding: 10px 0 10px 0;
+	color: var(--main-orange-color);
+}
+ul li {
+	margin: 10px 25px;
+}
+
+.hash-list li:first-child {
+	color: var(--main-green-color);
+	font-weight: 700 !important;
+}
+
 .gt-list {
 	list-style-type: '> ';
 	list-style-position: outside;
 	padding: 10px 0 10px 0;
-}
-
-.gt-list li {
-	margin: 10px 25px;
 }
 
 .gt-list p {
