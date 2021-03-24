@@ -162,6 +162,7 @@ a {
 	-ms-transition: .2s;
 	-moz-transition: .2s;
 	transition: .2s;
+	outline: 0;
 }
 
 a:hover {
