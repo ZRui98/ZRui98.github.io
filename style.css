@@ -25,6 +25,20 @@
 	color: var(--main-red-color);
 }
 
+@font-face {
+  font-family: 'Inconsolata';
+  src: url("./res/Inconsolata-Regular.ttf");
+  font-weight: 400;
+  font-style: monospace;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url("./res/Inconsolata-Bold.ttf");
+  font-weight: 700;
+  font-style: monospace;
+}
+
 .center {
 	text-align: center;
 }
