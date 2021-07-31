@@ -1,6 +1,7 @@
 :root {
 	--main-bg-color: #282828;
 	--main-off-bg-color: #303030;
+	--main-select-color: #484848;
 	--main-fg-color: #ebdbb2;
 	--main-red-color: #cc241d;
 	--main-orange-color: #d65d0e;
@@ -37,6 +38,14 @@
   src: url("./res/Inconsolata-Bold.ttf");
   font-weight: 700;
   font-style: monospace;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: var(--main-select-color);
+}
+
+::selection {
+  background: var(--main-select-color);
 }
 
 .center {
