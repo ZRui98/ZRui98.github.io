@@ -20,4 +20,4 @@ jobs:
             bucket-region: ${{ secrets.S3_BUCKET_REGION }}
             no-cache: true
             private: true
-            files-to-include: "build/*"
+            files-to-include: ".*/*,*/*,**"
